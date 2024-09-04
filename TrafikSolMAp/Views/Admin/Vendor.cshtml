@@ -1,0 +1,251 @@
+﻿@model TrafikSolMapLibrary.CBE.TrafikSolMapCBE
+
+    <title>Vendor Details</title>
+
+<div class="page-inner">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex align-items-center">
+                        <h3 class="card-title">VENDOR DETAILS</h3>
+                        <button class="btn btn-primary btn-round ms-auto"
+                                data-bs-toggle="modal"
+                                data-bs-target="#VendorModal"
+                                id="vendorForm">
+                            <i class="fas fa-plus-circle"></i>
+                            Add Vendor
+                        </button>
+                        <form asp-action="VendorReportDownload" asp-controller="Admin" class="d-inline">
+                            <button type="submit" class="btn btn-secondary export-btn">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-body">
+    <div class="table-responsive">
+        <table id="tbl" class="datatable table table-hover table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Vendor Name</th>
+                    <th>SubSystem</th>
+                    <th>Inserted By</th>
+                    <th>Inserted Date</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var vsdetails in Model.TSubsystemVendorCollection)
+                {
+                    <tr id="td">
+                        <td>@vsdetails.VID</td>
+                        <td>@vsdetails.VendorDesc</td>
+                        <td>@vsdetails.Details</td>
+                        <td>@vsdetails.RecordInsertedBy</td>
+                        <td>@vsdetails.RecordInsertedDate</td>
+                        <td>
+                            @if (!vsdetails.Alive)
+                            {
+                                <span class="badge badge-danger">@vsdetails.Alive</span>
+                            }
+                            else
+                            {
+                                <span class="badge badge-success">@vsdetails.Alive</span>
+                            }
+                        </td>
+                        <td>
+                            <button type="button" id="btnEdit" name="Edit" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#VendorModal" onclick="editVendorDetails('@vsdetails.VID')">
+                                <i class="fas fa-edit" aria-hidden="true"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <script>
+ let table = new DataTable('#tbl', {
+            "pageLength": 5, // Set the minimum page length to 5 rows
+            "lengthMenu": [5, 10, 25, 50,100], // Optional: provide other page length options
+           
+        });
+</script>
+
+<div class="modal fade" id="VendorModal" tabindex="-1" aria-labelledby="VendorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modalcol">
+             <div class="modal-header">
+                <h4 class="modal-title" id="VendorModalLabel">ADD NEW VENDOR</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+            </div> 
+            <div class="modal-body">
+                <form asp-action="InsertUpdateVendorDetails" asp-controller="Admin" class="p-3 bg-light rounded" id="vendorDetailsForm">
+                    <div class="row">
+                        <!-- Left Column -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Subsystem</label>
+                                <select asp-for="SubSysID" class="form-select" id="SubSystem">
+                                    <option selected disabled value="">Select SubSystem</option>
+                                    @foreach (var item in Model.SubsystemDetailsCollection)
+                                    {
+                                        <option value="@item.SubSysID">@item.Details</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="SubSysID" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Record Inserted Date</label>
+                                <input type="datetime-local" step="0.0001" asp-for="RecordInsertedDate" class="form-control" id="RecordInsertedDate" placeholder="RecordnInserted Date" />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Status</label>
+                                <div class="status-row">
+                                    <div>
+                                        <input type="radio" name="aliveRadio" value="true" id="activeRadio" class="form-check-input" />
+                                        <label for="activeRadio" class="form-check-label">Active</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="aliveRadio" value="false" id="inactiveRadio" class="form-check-input" />
+                                        <label for="inactiveRadio" class="form-check-label">Inactive</label>
+                                    </div>
+                                </div>
+                                <input type="hidden" asp-for="Alive" id="Alive" />
+                                <input type="hidden" asp-for="VID" id="VID" />
+                            </div>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Name</label>
+                                <input asp-for="VendorDesc" type="text" class="form-control" id="vendorName" placeholder="Vendor Name"/>
+                                <span asp-validation-for="VendorDesc" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Record Inserted By</label>
+                                <input asp-for="RecordInsertedBy" type="text" class="form-control" id="RecordInsertedBy" placeholder="Record Inserted By" />
+                                <span asp-validation-for="RecordInsertedBy" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="form-group mt-1 text-center">
+                        <button type="submit" class="btn btn-save mr-2" id="insert">Save</button>
+                        <button type="submit" class="btn btn-save-changes mr-2" id="update">Update</button>
+                        <button type="button" class="btn btn-clear" id="clearFormBtn">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#vendorForm').click(function () {
+            $('#vendorDetailsForm')[0].reset();
+             $('#insert').show();
+            $('#update').hide();
+
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = String(now.getMonth() + 1).padStart(2, '0');
+            var day = String(now.getDate()).padStart(2, '0');
+            var hours = String(now.getHours()).padStart(2, '0');
+            var minutes = String(now.getMinutes()).padStart(2, '0');
+            var seconds = now.getSeconds().toString().padStart(2, '0');
+            var milliseconds = (now.getMilliseconds()).toString().padStart(3, '0');
+            var isoString = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.${milliseconds}`;
+            $('#RecordInsertedDate').val(isoString);
+        });
+
+        $('#clearFormBtn').click(function () {
+            $('#vendorDetailsForm')[0].reset();
+        });
+
+        $('input[name="aliveRadio"]').change(function () {
+            $('#Alive').val($(this).val());
+        });
+
+        $('#update').hide();
+
+        window.editVendorDetails = function (VID) {
+            $('#insert').hide();
+            $('#update').show();
+            $.ajax({
+                url: '@Url.Action("TrafikSolEditVendor", "Admin")',
+                type: 'GET',
+                data: { VID: VID },
+                success: function (data) {
+                    $.each(data, function (index, item) {
+                        $('#SubSystem').val(item.subSysID);
+                        $('#RecordInsertedDate').val(item.recordInsertedDate);
+                        $('#vendorName').val(item.vendorDesc);
+                        $('#RecordInsertedBy').val(item.recordInsertedBy);
+                        $('#VID').val(item.vid);
+                        if (item.alive === true) {
+                            $('#activeRadio').prop('checked', true);
+                        } else {
+                            $('#inactiveRadio').prop('checked', true);
+                        }
+                    });
+                },
+                error: function (xhr, status, error) {
+                    console.error("AJAX error: ", status, error);
+                    showNotification('Error fetching vendor details!', 'danger');
+                }
+            });
+        }
+
+        $('#update').click(function () {
+            if ($('#activeRadio').is(':checked')) {
+                $('#Alive').val(true);
+            } else if ($('#inactiveRadio').is(':checked')) {
+                $('#Alive').val(false);
+            }
+
+            var formData = $('#vendorDetailsForm').serialize();
+            $.ajax({
+                url: '@Url.Action("InsertUpdateVendorDetails", "Admin")',
+                type: 'POST',
+                data: formData,
+                success: function (response) {
+                    console.log('success');
+                        // showNotification('Vendor details saved successfully!', 'success');
+                        // Optionally, refresh the table or update the UI
+                  
+                        
+                   
+                },
+                error: function (xhr, status, error) {
+                    console.log('error');
+                    // showNotification('Error saving vendor details!', 'danger');
+                }
+            });
+        });
+        window.downloadReport = function () {
+            var baseUrl = '/Admin/VendorReportDownload';
+            var url = `${baseUrl}`;
+        };
+        // function showNotification(message, type) {
+        //     let notification = $('#notification');
+        //     let notificationMessage = $('#notification-message');
+
+        //     notification.removeClass('alert-success alert-danger').addClass(`alert-${type}`);
+        //     notificationMessage.text(message);
+        //     notification.show();
+
+        //     // setTimeout(() => {
+        //     //     notification.hide();
+        //     // }, 5000);
+        // }
+    });
+</script>

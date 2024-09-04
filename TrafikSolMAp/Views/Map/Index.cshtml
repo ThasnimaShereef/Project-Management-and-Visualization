@@ -1,0 +1,87 @@
+﻿<!-- *************************************************************************************************************************************
+* File Name      : Map.cshtml
+* Author Name    : Thasnima
+* Date           : 27/06/2024
+***************************************************************************************************************************************-->
+@model TrafikSolMapLibrary.CBE.TrafikSolMapCBE
+<title>Map</title>
+<link rel="stylesheet" type="text/css" href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css" />
+<script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js"></script>
+<link href="~/css/site.css" rel="stylesheet" />
+
+<div class="page-inner">
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-3 mb-2">
+                        <button class="btn btn-black btn-sm dropdown-toggle w-100" type="button" data-bs-theme="dark" data-bs-toggle="dropdown" aria-expanded="false">
+                            Project Type
+                        </button>
+                        <div class="dropdown-menu scrollable-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+                            <h6 class="dropdown-header">Select Project Type</h6>
+                            <a class="dropdown-item">
+                                <input type="checkbox" class="select-all-checkbox" id="selectAllProjectTypes" checked>
+                                <label for="selectAllProjectTypes">Select All</label>
+                            </a>
+                            @foreach (var item in Model.ProjectTypeCollection)
+                            {
+                                <a class="dropdown-item">
+                                    <input type="checkbox" class="project-type-checkbox" id="projecttypeid_@item.ProjectTypeID" value="@item.ProjectTypeID" checked>
+                                    <label for="projecttypeid_@item.ProjectTypeID">@item.ProjectTypeName</label>
+                                </a>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3 mb-2">
+                        <button type="button" class="btn btn-black btn-sm dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
+                            Project Name
+                        </button>
+                        <div class="dropdown-menu scrollable-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton" id="projectName">
+                            <h6 class="dropdown-header">Select Project Name</h6>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3 mb-2">
+                        <button type="button" class="btn btn-black btn-sm dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
+                            Subsystem Type
+                        </button>
+                        <div class="dropdown-menu scrollable-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+                            <h6 class="dropdown-header">Select Subsystem Type</h6>
+                            <a class="dropdown-item">
+                                <input type="checkbox" class="select-all-checkboxes" id="selectAllSubsystemTypes" checked>
+                                <label for="selectAllSubsystemTypes">Select All</label>
+                            </a>
+                            @foreach (var item in Model.SubsystemTypeCollection)
+                            {
+                                <a class="dropdown-item">
+                                    <input type="checkbox" class="subsystem-type-checkbox" id="subsystemtypeid_@item.SubSystemTypeID" value="@item.SubSystemTypeID" checked>
+                                    <label for="subsystemtypeid_@item.SubSystemTypeID">@item.Details</label>
+                                </a>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3 mb-2">
+                        <button type="button" class="btn btn-black btn-sm dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
+                            Subsystem Name
+                        </button>
+                        <div class="dropdown-menu scrollable-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton" id="subsystemName">
+                            <h6 class="dropdown-header">Select Subsystem Name</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="map" id="map" style="width: 100%; height: 500px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="~/js/site.js"></script>
+

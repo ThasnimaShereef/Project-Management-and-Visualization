@@ -1,0 +1,292 @@
+﻿@model TrafikSolMapLibrary.CBE.TrafikSolMapCBE
+
+<style>
+    .btn-position {
+        position: relative;
+        top: 29px;
+        height: 44px;
+    }
+   
+</style>
+
+<div class="page-inner">
+     <div class="row">
+     @*    <div class="col-md-12"> *@ 
+            <div class="card">
+                <div class="card-header text-center" style="margin-top: 53px;">
+                    <h2 class="card-title"><b>PROJECT REPORT</b></h2>
+                <form>
+                    <div class="row justify-content-center" style="margin-top: 12px; margin-bottom: 12px;">
+                        <!-- First row of filters -->
+                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                            <button class="btn btn-black dropdown-toggle w-100" type="button" data-bs-theme="dark" data-bs-toggle="dropdown" aria-expanded="false">
+                                Project Type
+                            </button>
+                            <div class="dropdown-menu scrollable-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+                                <h6 class="dropdown-header">Select Project Type</h6>
+                                <a class="dropdown-item">
+                                    <input type="checkbox" class="select-all-checkbox" id="selectAllProjectTypes" checked>
+                                    <label for="selectAllProjectTypes">Select All</label>
+                                </a>
+                                @foreach (var item in Model.ProjectTypeCollection)
+                                {
+                                    <a class="dropdown-item">
+                                        <input type="checkbox" class="project-type-checkbox" id="projecttypeid_@item.ProjectTypeID" value="@item.ProjectTypeID" checked>
+                                        <label for="projecttypeid_@item.ProjectTypeID">@item.ProjectTypeName</label>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                            <button type="button" class="btn btn-black dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
+                                Project Name
+                            </button>
+                            <div class="dropdown-menu scrollable-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton" id="projectName">
+                                <h6 class="dropdown-header">Select Project Name</h6>
+                            </div>
+                        </div>
+                        <!-- Second row of filters -->
+                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                            <button type="button" class="btn btn-black dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
+                                Subsystem Type
+                            </button>
+                            <div class="dropdown-menu scrollable-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+                                <h6 class="dropdown-header">Select Subsystem Type</h6>
+                                <a class="dropdown-item">
+                                    <input type="checkbox" class="select-all-checkboxes" id="selectAllSubsystemTypes" checked>
+                                    <label for="selectAllSubsystemTypes">Select All</label>
+                                </a>
+                                @foreach (var item in Model.SubsystemTypeCollection)
+                                {
+                                    <a class="dropdown-item">
+                                        <input type="checkbox" class="subsystem-type-checkbox" id="subsystemtypeid_@item.SubSystemTypeID" value="@item.SubSystemTypeID" checked>
+                                        <label for="subsystemtypeid_@item.SubSystemTypeID">@item.Details</label>
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                            <button type="button" class="btn btn-black dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
+                                Subsystem Name
+                            </button>
+                            <div class="dropdown-menu scrollable-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton" id="subsystemName">
+                                <h6 class="dropdown-header">Select Subsystem Name</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Start Date and End Date -->
+                    <div class="row mb-3 align-items-center justify-content-center">
+                        <div class="col-md-5 col-12 d-flex align-items-center mb-2">
+                            <label class="form-label mb-0 me-2" style="white-space: nowrap;">Start Date:</label>
+                            <input asp-for="StartDate" class="form-control flex-grow-1" />
+                        </div>
+                        <div class="col-md-5 col-12 d-flex align-items-center mb-2">
+                            <label class="form-label mb-0 me-2" style="white-space: nowrap;">End Date:</label>
+                            <input asp-for="EndDate" class="form-control flex-grow-1" />
+                        </div>
+                    </div>
+                    <!-- Search button -->
+                    <div class="row mb-3">
+                        <div class="col-12 d-flex justify-content-center">
+                            <button id="searchButton" type="button" onclick="loadReport()" class="btn btn-primary btn-lg">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-body">
+                <iframe id="reportFrame" style="width: 100%; height: 600px;"></iframe>
+            </div>
+        </div>
+    </div>
+    @*</div> *@
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        updateDropdownNames();
+        setupProjectTypeCheckboxes();
+        setupSubsystemTypeCheckboxes();
+
+        // Function to update dropdown names based on selected project and subsystem types
+        function updateDropdownNames() {
+            const selectedProjectTypeIDs = getSelectedProjectTypeIDs();
+            const selectedSubsystemTypeIDs = getSelectedSubsystemTypeIDs();
+
+            $.when(
+                $.ajax({
+                    url: '/Map/ProjectDetailsDropdown',
+                    type: 'GET',
+                    data: { projectTypeIds: selectedProjectTypeIDs },
+                    traditional: true
+                }),
+                $.ajax({
+                    url: '/Map/SubsystemDetailsDropdown',
+                    type: 'GET',
+                    data: { subsystemTypeIds: selectedSubsystemTypeIDs },
+                    traditional: true
+                })
+            ).done(function (projectResponse, subsystemResponse) {
+                // Handle project name dropdown
+                const projectDropdown = $('#projectName');
+                projectDropdown.empty();
+                projectDropdown.append('<h6 class="dropdown-header">Select Project Name</h6>');
+                projectDropdown.append('<a class="dropdown-item"><input type="checkbox" class="select-all-checkbox" id="selectAllProjectNames"><label for="selectAllProjectNames">Select All</label></a>');
+                projectResponse[0].forEach(function (item) {
+                    projectDropdown.append('<a class="dropdown-item"><input type="checkbox" class="project-name-checkbox" value="' + item.projectID + '"><label for="projectnameid_' + item.projectID + '">' + " " + item.projectName + '</label></a>');
+                });
+                setupProjectNameCheckboxes();
+
+                // Handle subsystem name dropdown
+                const subsystemDropdown = $('#subsystemName');
+                subsystemDropdown.empty();
+                subsystemDropdown.append('<h6 class="dropdown-header">Select SubSystem Name</h6>');
+                subsystemDropdown.append('<a class="dropdown-item"><input type="checkbox" class="select-all-checkbox" id="selectAllSubsystemNames"><label for="selectAllSubsystemNames">Select All</label></a>');
+                subsystemResponse[0].forEach(function (item) {
+                    subsystemDropdown.append('<a class="dropdown-item"><input type="checkbox" class="subsystem-name-checkbox" value="' + item.subSysID + '"><label for="subsystemnameid_' + item.subSysID + '">' + " " + item.details + '</label></a>');
+                });
+                setupSubsystemNameCheckboxes();
+            }).fail(function (xhr, status, error) {
+                console.error('Error: ' + error);
+            });
+        }
+
+        // Get selected project type IDs
+        function getSelectedProjectTypeIDs() {
+            const selectedProjectTypeIDs = [];
+            document.querySelectorAll('.project-type-checkbox:checked').forEach(function (checkedCheckbox) {
+                selectedProjectTypeIDs.push(checkedCheckbox.value);
+            });
+            return selectedProjectTypeIDs;
+        }
+
+        // Get selected subsystem type IDs
+        function getSelectedSubsystemTypeIDs() {
+            const selectedSubsystemTypeIDs = [];
+            document.querySelectorAll('.subsystem-type-checkbox:checked').forEach(function (checkedCheckbox) {
+                selectedSubsystemTypeIDs.push(checkedCheckbox.value);
+            });
+            return selectedSubsystemTypeIDs;
+        }
+
+        // Set up project type checkboxes
+        function setupProjectTypeCheckboxes() {
+            const selectAllProjectTypes = document.getElementById('selectAllProjectTypes');
+            const projectTypeCheckboxes = document.querySelectorAll('.project-type-checkbox');
+
+            if (selectAllProjectTypes) {
+                selectAllProjectTypes.addEventListener('change', function () {
+                    const isChecked = selectAllProjectTypes.checked;
+                    projectTypeCheckboxes.forEach(function (checkbox) {
+                        checkbox.checked = isChecked;
+                    });
+                    updateDropdownNames();
+                });
+            }
+
+            projectTypeCheckboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    if (!checkbox.checked) {
+                        selectAllProjectTypes.checked = false;
+                    } else if (document.querySelectorAll('.project-type-checkbox:checked').length === projectTypeCheckboxes.length) {
+                        selectAllProjectTypes.checked = true;
+                    }
+                    updateDropdownNames();
+                });
+            });
+        }
+
+        // Set up subsystem type checkboxes
+        function setupSubsystemTypeCheckboxes() {
+            const selectAllSubsystemTypes = document.getElementById('selectAllSubsystemTypes');
+            const subsystemTypeCheckboxes = document.querySelectorAll('.subsystem-type-checkbox');
+
+            if (selectAllSubsystemTypes) {
+                selectAllSubsystemTypes.addEventListener('change', function () {
+                    const isChecked = selectAllSubsystemTypes.checked;
+                    subsystemTypeCheckboxes.forEach(function (checkbox) {
+                        checkbox.checked = isChecked;
+                    });
+                    updateDropdownNames();
+                });
+            }
+
+            subsystemTypeCheckboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    if (!checkbox.checked) {
+                        selectAllSubsystemTypes.checked = false;
+                    } else if (document.querySelectorAll('.subsystem-type-checkbox:checked').length === subsystemTypeCheckboxes.length) {
+                        selectAllSubsystemTypes.checked = true;
+                    }
+                    updateDropdownNames();
+                });
+            });
+        }
+
+        // Set up project name checkboxes
+        function setupProjectNameCheckboxes() {
+            const selectAllProjectNames = document.getElementById('selectAllProjectNames');
+            const projectNameCheckboxes = document.querySelectorAll('.project-name-checkbox');
+
+            if (selectAllProjectNames) {
+                selectAllProjectNames.addEventListener('change', function () {
+                    const isChecked = selectAllProjectNames.checked;
+                    projectNameCheckboxes.forEach(function (checkbox) {
+                        checkbox.checked = isChecked;
+                    });
+                });
+            }
+        }
+
+        // Set up subsystem name checkboxes
+        function setupSubsystemNameCheckboxes() {
+            const selectAllSubsystemNames = document.getElementById('selectAllSubsystemNames');
+            const subsystemNameCheckboxes = document.querySelectorAll('.subsystem-name-checkbox');
+
+            if (selectAllSubsystemNames) {
+                selectAllSubsystemNames.addEventListener('change', function () {
+                    const isChecked = selectAllSubsystemNames.checked;
+                    subsystemNameCheckboxes.forEach(function (checkbox) {
+                        checkbox.checked = isChecked;
+                    });
+                });
+            }
+        }
+
+        // Send selected IDs to controller when search button is clicked
+        window.loadReport = function () {
+            var button = document.getElementById('searchButton');
+            // Disable the button and show the loading spinner
+            button.innerHTML = `
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+            Loading...
+        `;
+            button.disabled = true;
+
+            var startDate = document.getElementById('StartDate').value;
+            var endDate = document.getElementById('EndDate').value;
+
+            const projectIds = [];
+            document.querySelectorAll('.project-name-checkbox:checked').forEach(function (checkbox) {
+                projectIds.push(checkbox.value);
+                console.log(projectIds);
+            });
+
+            const subsystemIds = [];
+            document.querySelectorAll('.subsystem-name-checkbox:checked').forEach(function (checkbox) {
+                subsystemIds.push(checkbox.value);
+            });
+
+    
+            // Construct the query parameters for projectIds and subsystemIds
+            var projectIdsParam = projectIds.map(id => `projectIds=${encodeURIComponent(id)}`).join('&');
+            var subsystemIdsParam = subsystemIds.map(id => `subsystemIds=${encodeURIComponent(id)}`).join('&');
+            var baseUrl = '/Report/ProjectReportgenerate';
+            var url = `${baseUrl}?startDate=${encodeURIComponent(startDate)}&endDate=${encodeURIComponent(endDate)}&${projectIdsParam}&${subsystemIdsParam}`;
+            document.getElementById('reportFrame').src = url;
+            document.getElementById('reportFrame').onload = function () {
+                button.innerHTML = 'Search';
+                button.disabled = false;
+            }
+        };
+    });
+</script>

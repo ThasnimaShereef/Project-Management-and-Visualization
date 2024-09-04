@@ -1,0 +1,219 @@
+﻿<!-- *************************************************************************************************************************************
+* File Name      : _layout.cshtml
+* Author Name    : Thasnima
+* Date           : 27/06/2024
+* Author Name    : Thasnima
+***************************************************************************************************************************************-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TrafikSolMap</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TrafikSolMap.styles.css" asp-append-version="true" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/fonts.css" rel="stylesheet" />
+    <link href="~/css/fonts.min.css" rel="stylesheet" />
+    <link href="~/css/kaiadmin.css" rel="stylesheet" />
+    <link href="~/css/kaiadmin.min.css" rel="stylesheet" /> 
+    <a href="~/css/kaiadmin.css.map"></a>
+    <link href="~/css/kaiadmin.min.css" rel="stylesheet" />
+    <a href="~/css/kaiadmin.css.map"></a>
+    <link href="~/css/plugins.css" rel="stylesheet" />
+    <link href="~/css/plugins.min.css" rel="stylesheet" />
+    <a href="~/css/plugins.css.map"></a>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.datatables.net/v/dt/dt-2.0.8/datatables.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/v/dt/dt-2.0.8/datatables.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+</head>
+<body>
+      <div class="wrapper">
+        <div class="sidebar" data-background-color="dark">
+            <div class="sidebar-logo">
+                <!-- Logo Header -->
+                <div class="logo-header" data-background-color="dark">
+                     <a href="index.html" class="logo"> 
+
+                        <img src="~/img/img_06172020111715.png"
+                             alt="navbar brand"
+                             class="navbar-brand"
+                             height="50" />
+                    </a>
+                    <div class="nav-toggle">
+                        <button class="btn btn-toggle toggle-sidebar">
+                            <i class="gg-menu-right"></i>
+                        </button>
+                        <button class="btn btn-toggle sidenav-toggler">
+                            <i class="gg-menu-left"></i>
+                        </button>
+                    </div>
+                    <button class="topbar-toggler more">
+                        <i class="gg-more-vertical-alt"></i>
+                    </button>
+                </div>
+                <!-- End Logo Header -->
+            </div>
+
+          
+            <div class="sidebar-wrapper scrollbar scrollbar-inner">
+                <div class="sidebar-content">
+                    <ul class="nav nav-secondary">
+                        <li class="nav-item active">
+                            <a data-bs-toggle="collapse" href="#admin-section" class="collapsed" aria-expanded="false">
+                                <i class="fas fa-home"></i>
+                                <p>Admin</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="admin-section">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="/Admin/Project">
+                                            <span class="sub-item">Project</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Admin/Vendor">
+                                            <span class="sub-item">Vendor</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Admin/Subsystem">
+                                            <span class="sub-item">Subsystem</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Admin/Verification">
+                                            <span class="sub-item">Verification</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="/Map/Index" class="collapsed" aria-expanded="false">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Map</p>
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a data-bs-toggle="collapse" href="#reports-section" class="collapsed" aria-expanded="false">
+                                <i class="fas fa-chart-bar"></i>
+                                <p>Reports</p>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="collapse" id="reports-section">
+                                <ul class="nav nav-collapse">
+                                    <li>
+                                        <a href="/Report/ProjectReport">
+                                            <span class="sub-item">Project Details</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+ 
+
+        <div class="main-panel">
+            <div class="main-header">
+                <div class="main-header-logo">
+                    <!-- Logo Header -->
+                    <div class="logo-header" data-background-color="dark">
+                      @*   <a href="index.html" class="logo">
+                            <img src="assets/img/kaiadmin/logo_light.svg"
+                                 alt="navbar brand"
+                                 class="navbar-brand"
+                                 height="20" />
+                        </a> *@
+                        <div class="nav-toggle">
+                            <button class="btn btn-toggle toggle-sidebar">
+                                <i class="gg-menu-right"></i>
+                            </button>
+                            <button class="btn btn-toggle sidenav-toggler">
+                                <i class="gg-menu-left"></i>
+                            </button>
+                        </div>
+                        <button class="topbar-toggler more">
+                            <i class="gg-more-vertical-alt"></i>
+                        </button>
+                    </div>
+                    <!-- End Logo Header -->
+                </div>
+                <!-- Navbar Header -->
+                <nav class="navbar navbar-header navbar-header navbar-expand-lg border-bottom">
+                @*     <div class="container-fluid"> *@
+                        <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                  
+
+                            <li class="nav-item topbar-user dropdown hidden-caret">
+                                <a class="dropdown-toggle profile-pic"
+                                   data-bs-toggle="dropdown"
+                                   href="#"
+                                   aria-expanded="false">
+                                    <div class="avatar-sm">
+                                        <img src="~/img/img_29462019054641.png" class="avatar-img rounded-circle" />
+                                    </div>
+                                    <span class="profile-username">
+                                        <span class="fw-bold">TrafikSol</span>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user animated fadeIn">
+                                    <div class="dropdown-user-scroll scrollbar-outer">
+                                
+                                    <li>
+                                   
+                                        <a class="dropdown-item" href="#">My Profile</a>
+                          
+                                        <a class="dropdown-item" href="/Home/Index">Logout</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+              @*       </div> *@
+                </nav>
+                <!-- End Navbar -->
+                <!-- Sidebar -->
+              
+                
+                    <main role="main">
+                        @RenderBody()
+                    </main>
+             
+            @* <footer class="footer" style="position:fixed; ">
+                    <div class="container-fluid d-flex justify-content-between">
+                        <div class="copyright">
+                            &copy; Copyright <strong><span>TrafikSol ITS Technologies Ltd.</span></strong>
+                            <label style="margin-left:44px; font-weight:900;">Version: [ V1.0.0.1 ]</label>
+                        </div>
+                    </div>
+                </footer>  
+            </div> *@
+
+        </div>
+     
+    </div>  
+
+  
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  @*   <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js"></script> *@
+    <script src="~/js/kaiadmin.js"></script>
+     <script src="~/js/kaiadmin.min.js"></script> 
+
+    <script src="~/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

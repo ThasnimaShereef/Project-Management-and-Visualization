@@ -1,0 +1,334 @@
+﻿@model TrafikSolMapLibrary.CBE.TrafikSolMapCBE
+
+<title>Project Details</title>
+
+<div class="page-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex align-items-center">
+                        <h3 class="card-title">PROJECT DETAILS</h3>
+                        <button class="btn btn-primary btn-round ms-auto"
+                                data-bs-toggle="modal"
+                                data-bs-target="#ProjectModal"
+                                id="projectForm">
+                            <i class="fas fa-plus-circle"></i>
+                            Add Project
+                        </button>
+                        <form asp-action="ProjectReportDownload" asp-controller="Admin" class="d-inline">
+                            <button type="submit" class="btn btn-secondary export-btn">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-body">
+    <div class="table-responsive">
+        <table id="tbl" class="datatable table table-hover table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Project Type Name</th>
+                    <th>Project Name</th>
+                    @* <th>Gst No</th>
+                    <th>Contact Person</th>
+                    <th>Email</th>
+                    <th>Contact No</th> *@
+                    <th>Inserted By</th>
+                    <th>Inserted Date</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var details in Model.ProjectDetailsCollection)
+                {
+                    <tr id="td">
+                        <td>@details.ProjectID</td>
+                        <td>@details.ProjectTypeName</td>
+                        <td>@details.ProjectName</td>
+                       @*  <td>@details.GstNo</td>
+                        <td>@details.ContactPerson</td>
+                        <td>@details.EmailID</td>
+                        <td>@details.ContactNo1</td> *@
+                        <td>@details.RecordInsertedBy</td>
+                        <td>@details.RecordInsertedDate</td>
+                        <td>
+                            @if (!details.Alive)
+                            {
+                                <span class="badge badge-danger">Inactive</span>
+                            }
+                            else if (details.Alive)
+                            {
+                                <span class="badge badge-success">Active</span>
+                            }
+                        </td>
+                        <td>
+                            <button type="button" id="btnEdit" name="Edit" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#ProjectModal" onclick="editProjectDetails('@details.ProjectID')">
+                                <i class="fas fa-edit" aria-hidden="true"></i>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="ProjectModal" tabindex="-1" aria-labelledby="ProjectModalLabel" aria-hidden="true" style="z-index:1050;background-color: rgba(0, 0, 0, 0.5);">
+            <div class="modal-dialog  modal-lg">
+                <div class="modal-content" id="modalcol">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="ProjectModalLabel">PROJECT DETAILS</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form asp-action="InsertUpdateProjectDetails" asp-controller="Admin" class="p-3 bg-light rounded" id="projectDetailsForm">
+                            <div class="row">
+                                <!-- Left Column -->
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Project Type</label>
+                                        <select asp-for="ProjectTypeID" class="form-select" id="ProjectTypeDropdown">
+                                            <option selected disabled value="">Select Project Type</option>
+                                             @foreach (var item in Model.ProjectTypeCollection)
+                                            {
+                                                <option value="@item.ProjectTypeID">@item.ProjectTypeName</option>
+                                            } 
+                                        </select>
+                                        <span asp-validation-for="ProjectTypeID" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Record Inserted Date</label>
+                                                <input type="datetime-local" step="0.0001" asp-for="RecordInsertedDate" class="form-control" id="RecordInsertedDate" placeholder="Record Inserted Date" />
+                                        <span asp-validation-for="RecordInsertedDate" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Contact Number</label>
+                                                <input asp-for="ContactNo1" type="tel" pattern="[0-9]{10}" class="form-control" id="ContactNo1" placeholder="Contact Number" />
+                                        <span asp-validation-for="ContactNo1" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">GST Number</label>
+                                                <input asp-for="GstNo" class="form-control" id="GstNo" placeholder="GST Number" />
+                                        <span asp-validation-for="GstNo" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">City ID</label>
+                                                <input asp-for="CityID" type="number" class="form-control" id="CityID" placeholder="City ID" />
+                                        <span asp-validation-for="CityID" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Permanent Pincode</label>
+                                                <input asp-for="PermanentPincode" type="number" class="form-control" id="PermanentPincode" placeholder="Permanent Pincode" />
+                                        <span asp-validation-for="PermanentPincode" class="text-danger"></span>
+                                    </div>
+                            <div class="form-group">
+                                <label class="control-label">Status</label>
+                                <div class="status-row">
+                                    <div>
+                                        <input type="radio" name="aliveRadio" value="true" id="activeRadio" class="form-check-input" />
+                                        <label for="activeRadio" class="form-check-label">Active</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="aliveRadio" value="false" id="inactiveRadio" class="form-check-input" />
+                                        <label for="inactiveRadio" class="form-check-label">Inactive</label>
+                                    </div>
+                                </div>
+                                        <input type="hidden" asp-for="Alive" id="Alive" />
+                                        <input type="hidden" asp-for="ProjectID" id="ProjectID" />
+                                    </div>
+                                </div>
+
+                                <!-- Middle Column -->
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Project Name</label>
+                                                <input asp-for="ProjectName" type="text" class="form-control" id="ProjectName" placeholder="Project Name" />
+                                        <span asp-validation-for="ProjectName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Contact Person</label>
+                                                <input asp-for="ContactPerson" type="text" class="form-control" id="ContactPerson" placeholder="Contact Person" />
+                                        <span asp-validation-for="ContactPerson" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Alternate Number</label>
+                                                <input asp-for="ContactNo2" type="tel" pattern="[0-9]{10}" class="form-control" id="ContactNo2" placeholder="Alternate Number" />
+                                        <span asp-validation-for="ContactNo2" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Country ID</label>
+                                                <input asp-for="CountryID" type="text" class="form-control" id="CountryID" placeholder="Country ID" />
+                                        <span asp-validation-for="CountryID" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Landmark</label>
+                                                <input asp-for="Landmark" class="form-control" id="Landmark" placeholder="Landmark" />
+                                        <span asp-validation-for="Landmark" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Billing Address</label>
+                                                <input asp-for="BillingAddress" type="text" class="form-control" id="BillingAddress" placeholder="Billing Address" />
+                                        <span asp-validation-for="BillingAddress" class="text-danger"></span>
+                                    </div>
+
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label">Record Inserted By</label>
+                                                <input asp-for="RecordInsertedBy" type="text" class="form-control" id="RecordInsertedBy" placeholder="Record Inserted By" />
+                                        <span asp-validation-for="RecordInsertedBy" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Email ID</label>
+                                                <input asp-for="EmailID" type="email" class="form-control " id="EmailID" placeholder="Email ID" />
+                                        <span asp-validation-for="EmailID" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Landline Number</label>
+                                                <input asp-for="LandlineNo" type="tel" pattern="[0-9]{10}" class="form-control" id="LandlineNo" placeholder="Landline Number" />
+                                        <span asp-validation-for="LandlineNo" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">State ID</label>
+                                                <input asp-for="StateID" type="number" class="form-control " id="StateID" placeholder="State ID" />
+                                        <span asp-validation-for="StateID" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Permanent Address</label>
+                                                <input asp-for="PermanentAddress" class="form-control " id="PermanentAddress" placeholder="Permanent Address" />
+                                        <span asp-validation-for="PermanentAddress" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Billing Pincode</label>
+                                                <input asp-for="BillingPincode" class="form-control " id="BillingPincode" placeholder="Billing Pincode" />
+                                        <span asp-validation-for="BillingPincode" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="form-group text-center">
+                            <button type="submit" class="btn btn-save mr-2" id="insert">Save</button>
+                            <button type="submit" class="btn btn-save-changes mr-2" id="update">Update</button>
+                            <button type="button" class="btn btn-clear" id="clearFormBtn">Clear</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+<script>
+   
+    let table = new DataTable('#tbl', {
+        "pageLength": 5, // Set the minimum page length to 5 rows
+        "lengthMenu": [5, 10, 25, 50, 100], // Optional: provide other page length options
+    });
+</script>
+
+    <script>
+        $(document).ready(function () {
+            $('#projectForm').click(function () {
+                $('#projectDetailsForm')[0].reset();
+            $('#insert').show();
+            $('#update').hide();
+                var now = new Date();
+                var year = now.getFullYear();
+                var month = String(now.getMonth() + 1).padStart(2, '0');
+                var day = String(now.getDate()).padStart(2, '0');
+                var hours = String(now.getHours()).padStart(2, '0');
+                var minutes = String(now.getMinutes()).padStart(2, '0');
+                var seconds = now.getSeconds().toString().padStart(2, '0');
+                var milliseconds = (now.getMilliseconds()).toString().padStart(3, '0');
+                var isoString = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.${milliseconds}`;
+                document.getElementById('RecordInsertedDate').value = isoString;
+
+            });
+            $('#update').hide();
+
+            $('input[name="aliveRadio"]').change(function () {
+                $('#Alive').val($(this).val());
+            });
+
+            $('#clearFormBtn').click(function () {
+                $('#projectDetailsForm')[0].reset();
+            });
+
+            window.editProjectDetails = function (ProjectID) {
+                $('#insert').hide();
+                $('#update').show();
+                $.ajax({
+                url: '@Url.Action("TrafikSolEditProject", "Admin")',
+                    type: 'GET',
+                    data: { ProjectID: ProjectID },
+                    success: function (data) {
+                        $.each(data, function (index, item) {
+                            console.log(item);
+                            console.log(item.projectID);
+
+                            $('#ProjectTypeDropdown').val(item.projectTypeID);
+                            $('#RecordInsertedDate').val(item.recordInsertedDate);
+                            $('#ContactNo1').val(item.contactNo1);
+                            $('#GstNo').val(item.gstNo);
+                            $('#CityID').val(item.cityID);
+                            $('#PermanentPincode').val(item.permanentPincode);
+                            $('#ProjectName').val(item.projectName);
+                            $('#ContactPerson').val(item.contactPerson);
+                            $('#ContactNo2').val(item.contactNo2);
+                            $('#Landmark').val(item.landmark);
+                            $('#BillingAddress').val(item.billingAddress);
+                            $('#CountryID').val(item.countryID);
+                            $('#RecordInsertedBy').val(item.recordInsertedBy);
+                            $('#EmailID').val(item.emailID);
+                            $('#LandlineNo').val(item.landlineNo);
+                            $('#StateID').val(item.stateID);
+                            $('#PermanentAddress').val(item.permanentAddress);
+                            $('#BillingPincode').val(item.billingPincode);
+                            $('#ProjectID').val(item.projectID);
+                            // Set the radio button based on status
+                            if (item.alive === true) {
+                                $('#activeRadio').prop('checked', true);
+                            } else {
+                                $('#inactiveRadio').prop('checked', true);
+                            }
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("AJAX error: ", status, error);
+                    }
+                });
+            }
+            $('#update').click(function () {
+          
+                if ($('#activeRadio').is(':checked')) {
+                    $('#Alive').val(true);
+                } else if ($('#inactiveRadio').is(':checked')) {
+                    $('#Alive').val(false);
+                }
+
+                var formData = $('#projectDetailsForm').serialize();
+                console.log("formData" + formData);
+
+                $.ajax({
+                    url: '@Url.Action("InsertUpdateProjectDetails", "Admin")',
+                    type: 'POST',
+                    data: formData,
+                    success: function (response) {
+
+                        console.log('Form data successfully submitted!');
+
+                    },
+                    error: function (xhr, status, error) {
+
+                        console.error('Error submitting form data:', error);
+
+                    }
+                });
+            });
+
+
+        });
+    </script>

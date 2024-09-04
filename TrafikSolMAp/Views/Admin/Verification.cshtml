@@ -1,0 +1,455 @@
+﻿@model TrafikSolMapLibrary.CBE.TrafikSolMapCBE
+<title>Verification Details</title>
+<style>
+
+</style>
+<div class="page-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="card-title">VERIFY SUBSYSTEM DETAILS</h3>
+                        <form asp-action="VerificationReportDownload" asp-controller="Admin">
+                            <button type="submit" class="btn btn-secondary export-btn">
+                                <i class="fas fa-file-pdf"></i> PDF
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                           <table id="tbl" class="datatable table table-hover table-striped">
+                            <thead class="thead-dark ">
+                                <tr>
+                            <th>Sr No.</th>
+                           @*  <th>Project Type Name</th> *@
+                            <th>Project Name</th>
+                            @* <th>Subsystem Type</th> *@
+                            <th>Subsystem Name</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Verification Status</th>
+                            <th>Verify</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var details in Model.TSubSystemMasterDetailsBECollection)
+                                {
+                                    <tr id="td">
+                                        <td>@details.TSubSystemMID</td>
+                                       @*  <td>@details.ProjectTypeName</td> *@
+                                        <td>@details.ProjectName</td>
+                                       @*  <td>@details.SubsystemType</td> *@
+                                        <td>@details.SubsystemName</td>
+                                        <td>@details.Details</td>
+                                        <td>
+                                            @if (!details.Alive)
+                                            {
+                                                <span class="badge badge-danger">Offline</span>
+                                            }
+                                            else if (details.Alive)
+                                            {
+                                                <span class="badge badge-success">Online</span>
+                                            }
+                                        </td>
+                                        <td>
+                                            @if (!details.Verified)
+                                            {
+                                                <span class="badge badge-danger">Unverified</span>
+                                            }
+                                            else if (details.Verified)
+                                            {
+                                                <span class="badge badge-success">Verified</span>
+                                            }
+                                        </td>
+
+                                        <td>
+                                            <button type="button" id="btnEdit" name="Edit" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#VerifyModal" onclick="editSubsystemDetails('@details.TSubSystemMID')">
+                                                <i class="fas fa-edit" aria-hidden="true"></i>
+                                            </button>
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="VerifyModal" tabindex="-1" aria-labelledby="VerifyModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content" id="modalcol">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="VerifyModalLabel">VERIFY DETAILS</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form asp-action="VerifyTSubSystemMasterDetails" asp-controller="Admin" class="p-3 bg-light rounded" id="verifyDetailsForm">
+                                    <div class="row border-2">
+                                        <!-- Left Column -->
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Project Type</label>
+                                                <select asp-for="ProjectTypeID" class="form-select" id="ProjectTypeID" disabled>
+                                                    <option selected disabled value="">Select Project Type</option>
+                                                    @foreach (var item in Model.ProjectTypeCollection)
+                                                    {
+                                                        <option value="@item.ProjectTypeID">@item.ProjectTypeName</option>
+                                                    }
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Subsystem Name</label>
+                                                <select asp-for="SubSysID" class="form-select" id="SubSysID" disabled>
+                                                    <option selected disabled value="">Select Subsystem Name</option>
+                                                </select>
+                                                <span asp-validation-for="SubSysID" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Short Name</label>
+                                                <input asp-for="ShortDetails" class="form-control " type="text" id="ShortDetails" placeholder="Short Name" readonly/>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Latitude</label>
+                                                <input class="form-control " type="text" id="Latitude" asp-for="Latitude" placeholder="Latitude" readonly />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Model</label>
+                                                <input class="form-control " type="text" id="VendorModel" asp-for="VendorModel" placeholder="Model" readonly />
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Record Insertion Date</label>
+                                                <input class="form-control " id="RecordInsertedDate" type="datetime-local" step="0.0001" asp-for="RecordInsertedDate" placeholder="Record Insertion Date" readonly />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Warranty End Date</label>
+                                                <input class="form-control " id="WarrantyEndDate" type="date" asp-for="WarrantyEndDate" placeholder="Warranty End Date" readonly />
+                                            </div>
+                                        </div>
+                                        <!-- Middle Column -->
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="control-label">Project Name</label>
+                                                <select asp-for="ProjectID" class="form-select" id="ProjectID" disabled>
+                                                    <option selected disabled value="">Select Project Name</option>
+                                                </select>
+                                                <span asp-validation-for="ProjectID" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Serial Number</label>
+                                                <input class="form-control " type="text" id="Serialno" asp-for="SerialNo" placeholder="Serial Number" readonly/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">IP Address</label>
+                                                <input class="form-control " type="text" id="IPAddress" asp-for="IPAddress" placeholder="IP Address" readonly />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Longitude</label>
+                                                <input class="form-control " type="text" id="Longitude" asp-for="Longitude" placeholder="Longitude" readonly/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Address</label>
+                                                <input class="form-control " type="text" id="Address" asp-for="Address" placeholder="Address" readonly/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Subsystem Installation Date</label>
+                                                <input class="form-control " type="date" id="SubsystemInstallationDate" asp-for="SubsystemInstallationDate" placeholder="Subsystem Installation Date" readonly />
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label">Status</label>
+                                                <div class="status-row">
+                                                    <div>
+                                                        <input type="radio" name="aliveRadio" value="true" id="activeRadio" class="form-check-input" disabled />
+                                                        <label for="activeRadio" class="form-check-label">Active</label>
+                                                    </div>
+                                                    <div>
+                                                        <input type="radio" name="aliveRadio" value="false" id="inactiveRadio" class="form-check-input" disabled />
+                                                        <label for="inactiveRadio" class="form-check-label">Inactive</label>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" asp-for="Alive" id="Alive" />
+                                                <input type="hidden" asp-for="TSubSystemMID" id="TSubSystemMID" />
+                                            </div>
+                                        </div>
+                                        <!-- Right Column -->
+                                        <div class="col-md-4">
+                                            <div class="form-group ">
+                                                <label class="control-label">SubSystem Type</label>
+                                                <select asp-for="SubSystemTypeID" class="form-select" id="SubSystemTypeID" disabled>
+                                                    <option selected disabled value="">Select SubSystem Type</option>
+                                                    @foreach (var item in Model.SubsystemTypeCollection)
+                                                    {
+                                                        <option value="@item.SubSystemTypeID">@item.Details</option>
+                                                    }
+                                                </select>
+                                                <span asp-validation-for="SubSystemTypeID" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Name</label>
+                                                <input class="form-control " type="text" id="Details" asp-for="Details" placeholder="Name" readonly/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Location</label>
+                                                <input class="form-control " type="text" id="Location" asp-for="Location" placeholder="Location" readonly />
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label">Vendor Name</label>
+                                                <select asp-for="VendorID" class="form-select" id="VID" onchange="updateVendorDesc()" disabled>
+                                                    <option selected disabled value="">Select Vendor Name</option>
+                                                </select>
+                                                <input type="hidden" asp-for="VendorDesc" id="VendorDesc" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Record Inserted By</label>
+                                                <input class="form-control " type="text" id="RecordInsertedBy" asp-for="RecordInsertedBy" placeholder="Record Inserted By" readonly/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Warranty Start Date</label>
+                                                <input class="form-control " type="date" id="WarrantyStartDate" asp-for="WarrantyStartDate" placeholder="Warranty Start Date" readonly/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Verification Status</label>
+                                                <div class="status-row">
+                                                    <div>
+                                                        <input type="checkbox" name="verifyCheckbox" value="false" id="verifiedCheckbox" class="form-check-input control-label" />
+                                                        <label for="verified" class="form-check-label">Verify</label>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" asp-for="Verified" id="verified" />
+                                            </div>
+                                        </div>
+
+                                        <!-- Buttons -->
+                                        <div class="form-group mt-1 text-center">
+                                            <button type="submit" class="btn btn-save mr-2" id="insert">Save</button>
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+<script>
+    let table = new DataTable('#tbl', {
+        "pageLength": 5, // Set the minimum page length to 5 rows
+        "lengthMenu": [5, 10, 25, 50, 100], // Optional: provide other page length options
+
+    });
+</script>
+<script>
+    $(document).ready(function () {
+
+        $('#verifiedCheckbox').change(function () {
+            $('#verified').val(this.checked ? 'true' : 'false');
+        });
+
+        function populateProjectDropdown(projectTypeId) {
+            console.log(projectTypeId);
+            return new Promise(function (resolve, reject) {
+                if (projectTypeId) {
+                    $.ajax({
+                        url: '@Url.Action("SelectProjectName", "Admin")',
+                        type: 'GET',
+                        data: { projectTypeId: projectTypeId },
+                        success: function (data) {
+                            console.log(data);
+                            var projectNameDropdown = $('#ProjectID');
+                            projectNameDropdown.empty();
+                            projectNameDropdown.append('<option selected disabled value="">Select Project Name</option>');
+                            // if (Array.isArray(data) && data.length > 0) {
+                            $.each(data, function (index, item) {
+                                //   if (item && item.projectID && item.projectName) {
+                                projectNameDropdown.append('<option value="' + item.projectID + '">' + item.projectName + '</option>');
+                                //   }
+                            });
+                            resolve();
+                            // }
+                        },
+                        error: function () {
+                            alert('Error retrieving project details.');
+                            reject('Error retrieving project details.');
+                        }
+                    });
+                } else {
+                    $('#ProjectID').empty();
+                    $('#ProjectID').append('<option selected disabled value="">Select </option>');
+                    resolve();
+                }
+            });
+        };
+
+        function populateSubsystemDropdown(subSystemTypeId) {
+            console.log(subSystemTypeId);
+            return new Promise(function (resolve, reject) {
+                if (subSystemTypeId) {
+                    $.ajax({
+                        url: '@Url.Action("SelectSubsystemName", "Admin")',
+                        type: 'GET',
+                        data: { subSystemTypeId: subSystemTypeId },
+                        success: function (data) {
+                            var subsystemNameDropdown = $('#SubSysID');
+                            subsystemNameDropdown.empty();
+                            subsystemNameDropdown.append('<option selected disabled value="">Select Subsystem Name</option>');
+                            //   if (Array.isArray(data) && data.length > 0) {
+                            $.each(data, function (index, item) {
+                                if (item && item.subSysID && item.details) {
+                                    subsystemNameDropdown.append('<option value="' + item.subSysID + '">' + item.details + '</option>');
+                                }
+                            });
+                            resolve();
+                            //  }
+                        },
+                        error: function () {
+                            alert('Error retrieving subsystem details.');
+                            reject('Error retrieving project details.');
+                        }
+                    });
+                } else {
+                    $('#SubSysID').empty();
+                    $('#SubSysID').append('<option selected disabled value="">Select</option>');
+                    resolve();
+                }
+            });
+        };
+
+        function populateVendorDropdown(subSysID) {
+            console.log(subSysID);
+            return new Promise(function (resolve, reject) {
+                if (subSysID) {
+                    $.ajax({
+                        url: '@Url.Action("SelectVendorName", "Admin")',
+                        type: 'GET',
+                        data: { subSysID: subSysID },
+                        success: function (data) {
+                            var vendorDropdown = $('#VID');
+                            vendorDropdown.empty();
+                            vendorDropdown.append('<option selected disabled value="">Select Vendor Name</option>');
+                            // if (Array.isArray(data) && data.length > 0) {
+                            $.each(data, function (index, item) {
+                                if (item && item.vid && item.vendorDesc) {
+                                    vendorDropdown.append('<option value="' + item.vendorID + '">' + item.vendorDesc + '</option>');
+                                }
+                            });
+                            resolve();
+                            //  }
+                        },
+                        error: function () {
+                            alert('Error retrieving subsystem details.');
+                            reject('Error retrieving project details.');
+                        }
+                    });
+
+                } else {
+                    $('#VID').empty();
+                    $('#VID').append('<option selected disabled value="">Select</option>');
+                    resolve();
+                }
+            });
+        };
+
+        window.editSubsystemDetails = function (TSubSystemMID) {
+
+            $.ajax({
+                url: '@Url.Action("TrafikSolEditSubsystem", "Admin")',
+                type: 'GET',
+                data: { TSubSystemMID: TSubSystemMID },
+                success: function (data) {
+                    $.each(data, function (index, item) {
+                        console.log(item);
+                        console.log(item.tSubSystemMID);
+
+                        $('#TSubSystemMID').val(item.tSubSystemMID);
+                        $('#ProjectTypeID').val(item.projectTypeID);
+                        $('#ShortDetails').val(item.shortDetails);
+                        $('#Latitude').val(item.latitude);
+                        $('#VendorModel').val(item.model);
+                        $('#RecordInsertedDate').val(item.recordInsertedDate);
+                        $('#WarrantyEndDate').val(item.warrantyEndDate ? item.warrantyEndDate.split('T')[0] : '');
+                        $('#Serialno').val(item.serialNo);
+                        $('#IPAddress').val(item.ipAddress);
+                        $('#Longitude').val(item.longitude);
+                        $('#Address').val(item.address);
+                        $('#SubsystemInstallationDate').val(item.subsystemInstallationDate ? item.subsystemInstallationDate.split('T')[0] : '');
+                        $('#SubSystemTypeID').val(item.systemID);
+                        $('#Details').val(item.details);
+                        $('#Location').val(item.location);
+                        $('#RecordInsertedBy').val(item.recordInsertedBy);
+                        $('#WarrantyStartDate').val(item.warrantyStartDate ? item.warrantyStartDate.split('T')[0] : '');
+                        $('#VendorDesc').val(item.vendorDesc);
+
+                        populateProjectDropdown(item.projectTypeID).then(function () {
+                            $('#ProjectID').val(item.projectID);
+                            console.log("Project dropdown populated");
+                        });
+                        populateSubsystemDropdown(item.systemID).then(function () {
+                            $('#SubSysID').val(item.subSysID);
+                        }).then(function () {
+                            return populateVendorDropdown(item.subSysID);
+                        }).then(function () {
+                            $('#VID').val(item.vendorID);
+                        });
+
+                        if (item.alive === true) {
+                            $('#activeRadio').prop('checked', true);
+                        } else {
+                            $('#inactiveRadio').prop('checked', true);
+                        }
+
+                        if (item.verified === true) {
+                            $('#verifiedCheckbox').prop('checked', true);
+                        }
+                        else {
+                            $('#verifiedCheckbox').prop('checked', false);
+                        }
+
+                    });
+                },
+                error: function (xhr, status, error) {
+                    console.error("AJAX error: ", status, error);
+                }
+            });
+        }
+
+        $('#update').click(function () {
+
+            if ($('#verifiedCheckbox').is(':checked')) {
+                $('#verifiedCheckbox').val(true);
+            }
+
+            var formData = $('#subsystemDetailsForm').serialize();
+            console.log("formData" + formData);
+
+            $.ajax({
+                url: '@Url.Action("VerifyTSubSystemMasterDetails", "Admin")',
+                type: 'POST',
+                data: formData,
+                success: function (response) {
+
+                    console.log('Form data successfully submitted!');
+
+                },
+                error: function (xhr, status, error) {
+
+                    console.error('Error submitting form data:', error);
+
+                }
+            });
+        });
+        window.downloadReport = function () {
+            var baseUrl = '/Admin/VerificationReportDownload';
+            var url = `${baseUrl}`;
+        };
+
+    });
+</script>

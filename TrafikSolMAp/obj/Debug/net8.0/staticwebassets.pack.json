@@ -1,0 +1,869 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TrafikSolMAP.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TrafikSolMAP.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\Report\\SubsystemDetails.rdlc",
+      "PackagePath": "staticwebassets\\Report\\SubsystemDetails.rdlc"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\Report\\VendorDetails.rdlc",
+      "PackagePath": "staticwebassets\\Report\\VendorDetails.rdlc"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\Report\\VerificationDetails.rdlc",
+      "PackagePath": "staticwebassets\\Report\\VerificationDetails.rdlc"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\Report\\projectdetails.rdlc",
+      "PackagePath": "staticwebassets\\Report\\projectdetails.rdlc"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\Report\\projectpdf.rdlc",
+      "PackagePath": "staticwebassets\\Report\\projectpdf.rdlc"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\demo.css",
+      "PackagePath": "staticwebassets\\css\\demo.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\demo.css.map",
+      "PackagePath": "staticwebassets\\css\\demo.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\fonts.css",
+      "PackagePath": "staticwebassets\\css\\fonts.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\fonts.min.css",
+      "PackagePath": "staticwebassets\\css\\fonts.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\kaiadmin.css",
+      "PackagePath": "staticwebassets\\css\\kaiadmin.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\kaiadmin.css.map",
+      "PackagePath": "staticwebassets\\css\\kaiadmin.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\kaiadmin.min.css",
+      "PackagePath": "staticwebassets\\css\\kaiadmin.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\plugins.css",
+      "PackagePath": "staticwebassets\\css\\plugins.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\plugins.css.map",
+      "PackagePath": "staticwebassets\\css\\plugins.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\plugins.min.css",
+      "PackagePath": "staticwebassets\\css\\plugins.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\fontawesome\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\simple-line-icons\\Simple-Line-Icons.eot",
+      "PackagePath": "staticwebassets\\fonts\\simple-line-icons\\Simple-Line-Icons.eot"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\simple-line-icons\\Simple-Line-Icons.svg",
+      "PackagePath": "staticwebassets\\fonts\\simple-line-icons\\Simple-Line-Icons.svg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\simple-line-icons\\Simple-Line-Icons.ttf",
+      "PackagePath": "staticwebassets\\fonts\\simple-line-icons\\Simple-Line-Icons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\simple-line-icons\\Simple-Line-Icons.woff",
+      "PackagePath": "staticwebassets\\fonts\\simple-line-icons\\Simple-Line-Icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\simple-line-icons\\Simple-Line-Icons.woff2",
+      "PackagePath": "staticwebassets\\fonts\\simple-line-icons\\Simple-Line-Icons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\summernote\\summernote.eot",
+      "PackagePath": "staticwebassets\\fonts\\summernote\\summernote.eot"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\summernote\\summernote.ttf",
+      "PackagePath": "staticwebassets\\fonts\\summernote\\summernote.ttf"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\summernote\\summernote.woff",
+      "PackagePath": "staticwebassets\\fonts\\summernote\\summernote.woff"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\fonts\\summernote\\summernote.woff2",
+      "PackagePath": "staticwebassets\\fonts\\summernote\\summernote.woff2"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\4grouter.png",
+      "PackagePath": "staticwebassets\\image\\4grouter.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\GreenPin.png",
+      "PackagePath": "staticwebassets\\image\\GreenPin.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\LONGVIEW.png",
+      "PackagePath": "staticwebassets\\image\\LONGVIEW.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\MainVMS.png",
+      "PackagePath": "staticwebassets\\image\\MainVMS.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\VIDScameraUp.png",
+      "PackagePath": "staticwebassets\\image\\VIDScameraUp.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\VMSPORTABLE.png",
+      "PackagePath": "staticwebassets\\image\\VMSPORTABLE.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\Visibility.png",
+      "PackagePath": "staticwebassets\\image\\Visibility.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\WIM-PORTABLE.png",
+      "PackagePath": "staticwebassets\\image\\WIM-PORTABLE.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\ambulance.png",
+      "PackagePath": "staticwebassets\\image\\ambulance.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\atcc.png",
+      "PackagePath": "staticwebassets\\image\\atcc.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\blindspot.png",
+      "PackagePath": "staticwebassets\\image\\blindspot.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\busbay.png",
+      "PackagePath": "staticwebassets\\image\\busbay.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\busbay1.png",
+      "PackagePath": "staticwebassets\\image\\busbay1.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\camera 1 left.png",
+      "PackagePath": "staticwebassets\\image\\camera 1 left.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\camera-tampering.png",
+      "PackagePath": "staticwebassets\\image\\camera-tampering.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\cctv.png",
+      "PackagePath": "staticwebassets\\image\\cctv.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\congestionPNG.png",
+      "PackagePath": "staticwebassets\\image\\congestionPNG.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\crane.png",
+      "PackagePath": "staticwebassets\\image\\crane.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\cross.png",
+      "PackagePath": "staticwebassets\\image\\cross.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\desktop.png",
+      "PackagePath": "staticwebassets\\image\\desktop.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\ecb blue.png",
+      "PackagePath": "staticwebassets\\image\\ecb blue.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\end.png",
+      "PackagePath": "staticwebassets\\image\\end.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\firebrigade.png",
+      "PackagePath": "staticwebassets\\image\\firebrigade.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\fog-detection.png",
+      "PackagePath": "staticwebassets\\image\\fog-detection.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\gasstation.png",
+      "PackagePath": "staticwebassets\\image\\gasstation.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\gsmgateway.png",
+      "PackagePath": "staticwebassets\\image\\gsmgateway.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\hospital.png",
+      "PackagePath": "staticwebassets\\image\\hospital.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\inverter.png",
+      "PackagePath": "staticwebassets\\image\\inverter.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\maintenance1.png",
+      "PackagePath": "staticwebassets\\image\\maintenance1.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\maintenance2.png",
+      "PackagePath": "staticwebassets\\image\\maintenance2.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\maintenance3.png",
+      "PackagePath": "staticwebassets\\image\\maintenance3.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\maintenance4.png",
+      "PackagePath": "staticwebassets\\image\\maintenance4.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\matrixswitch.png",
+      "PackagePath": "staticwebassets\\image\\matrixswitch.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\mediaconverter.png",
+      "PackagePath": "staticwebassets\\image\\mediaconverter.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\met.png",
+      "PackagePath": "staticwebassets\\image\\met.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\mrcs.png",
+      "PackagePath": "staticwebassets\\image\\mrcs.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\nas.png",
+      "PackagePath": "staticwebassets\\image\\nas.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\networkswitch.png",
+      "PackagePath": "staticwebassets\\image\\networkswitch.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\noparking.png",
+      "PackagePath": "staticwebassets\\image\\noparking.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\nvr.png",
+      "PackagePath": "staticwebassets\\image\\nvr.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\overspeeding.png",
+      "PackagePath": "staticwebassets\\image\\overspeeding.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\printer.png",
+      "PackagePath": "staticwebassets\\image\\printer.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\ptzcontroller.png",
+      "PackagePath": "staticwebassets\\image\\ptzcontroller.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\route-patrolling.png",
+      "PackagePath": "staticwebassets\\image\\route-patrolling.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\server.png",
+      "PackagePath": "staticwebassets\\image\\server.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\speed-drop.png",
+      "PackagePath": "staticwebassets\\image\\speed-drop.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\start.png",
+      "PackagePath": "staticwebassets\\image\\start.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\storage.png",
+      "PackagePath": "staticwebassets\\image\\storage.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\switch.png",
+      "PackagePath": "staticwebassets\\image\\switch.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\tollplaza.png",
+      "PackagePath": "staticwebassets\\image\\tollplaza.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\tripwire.png",
+      "PackagePath": "staticwebassets\\image\\tripwire.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\ttes.png",
+      "PackagePath": "staticwebassets\\image\\ttes.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\tv.png",
+      "PackagePath": "staticwebassets\\image\\tv.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\underconstruction.png",
+      "PackagePath": "staticwebassets\\image\\underconstruction.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\ups.png",
+      "PackagePath": "staticwebassets\\image\\ups.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\verified.png",
+      "PackagePath": "staticwebassets\\image\\verified.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\videowall.png",
+      "PackagePath": "staticwebassets\\image\\videowall.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\voip.png",
+      "PackagePath": "staticwebassets\\image\\voip.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\vpnconcentrator.png",
+      "PackagePath": "staticwebassets\\image\\vpnconcentrator.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\warning.png",
+      "PackagePath": "staticwebassets\\image\\warning.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\wirelessantenna.png",
+      "PackagePath": "staticwebassets\\image\\wirelessantenna.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\workstation.png",
+      "PackagePath": "staticwebassets\\image\\workstation.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\image\\wrong.png",
+      "PackagePath": "staticwebassets\\image\\wrong.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\Data_security_05.jpg",
+      "PackagePath": "staticwebassets\\img\\Data_security_05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\Img_06172020111715.png",
+      "PackagePath": "staticwebassets\\img\\Img_06172020111715.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\Img_06172020111718.jpg",
+      "PackagePath": "staticwebassets\\img\\Img_06172020111718.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\Img_15072020100738.png",
+      "PackagePath": "staticwebassets\\img\\Img_15072020100738.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\Img_29462019054641.png",
+      "PackagePath": "staticwebassets\\img\\Img_29462019054641.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\img-shadow.png",
+      "PackagePath": "staticwebassets\\img\\img-shadow.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\demo1.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\demo1.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\demo2.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\demo2.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\demo3.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\demo3.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\demo4.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\demo4.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\demo5.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\demo5.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\demo6.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\demo6.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\demo7.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\demo7.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\demo8.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\demo8.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\demo9.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\demo9.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\favicon.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\favicon.svg",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\favicon.svg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\icon.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\icon.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\icon.svg",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\logo_dark.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\logo_dark.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\logo_dark.svg",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\logo_dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\logo_documentation.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\logo_documentation.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\logo_light.png",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\logo_light.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\img\\kaiadmin\\logo_light.svg",
+      "PackagePath": "staticwebassets\\img\\kaiadmin\\logo_light.svg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\core\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\core\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\core\\jquery-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\js\\core\\jquery-3.7.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\core\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\core\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\demo.js",
+      "PackagePath": "staticwebassets\\js\\demo.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\kaiadmin.js",
+      "PackagePath": "staticwebassets\\js\\kaiadmin.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\kaiadmin.min.js",
+      "PackagePath": "staticwebassets\\js\\kaiadmin.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\bootstrap-toggle\\bootstrap-toggle.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\bootstrap-toggle\\bootstrap-toggle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\chart-circle\\circles.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\chart-circle\\circles.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\chart.js\\chart.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\chart.js\\chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\datatables\\datatables.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\datatables\\datatables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\dropzone\\dropzone.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\dropzone\\dropzone.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\fullcalendar\\fullcalendar.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\fullcalendar\\fullcalendar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\jquery-scrollbar\\jquery.scrollbar.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\jquery-scrollbar\\jquery.scrollbar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\jquery.magnific-popup\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\jquery.magnific-popup\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\jquery.validate\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\jquery.validate\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\list.js\\list.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\list.js\\list.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\moment\\moment.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\moment\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\owl-carousel\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\js\\plugin\\owl-carousel\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\owl-carousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\owl-carousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\owl-carousel\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\js\\plugin\\owl-carousel\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\sortable\\sortable.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\sortable\\sortable.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\sticky-sidebar\\sticky-sidebar.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\sticky-sidebar\\sticky-sidebar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\plugin\\webfont\\webfont.min.js",
+      "PackagePath": "staticwebassets\\js\\plugin\\webfont\\webfont.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\OneDrive\\Desktop\\tomtommap\\Backup\\map\\TrafikSolMAP\\TrafikSolMap\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TrafikSolMAP.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TrafikSolMAP.props",
+      "PackagePath": "build\\TrafikSolMAP.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TrafikSolMAP.props",
+      "PackagePath": "buildMultiTargeting\\TrafikSolMAP.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TrafikSolMAP.props",
+      "PackagePath": "buildTransitive\\TrafikSolMAP.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
