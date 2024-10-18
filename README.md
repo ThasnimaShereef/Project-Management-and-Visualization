@@ -35,7 +35,7 @@ Here are some screenshots of the project:
 ![Project Table](Images/project.png)
 *Example of the project table view.*
 
-![Map View](images/map_view.png)
+![Map View](Images/map.png)
 *Route visualization between project sites.*
 
 ![Subsystem Management](images/subsystem_management.png)
