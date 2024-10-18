@@ -38,7 +38,7 @@ Here are some screenshots of the project:
 ![Map View](Images/map.png)
 *Route visualization between project sites.*
 
-![Subsystem Management](images/subsystem_management.png)
+![Subsystem Management](Images/subsystem.png)
 *Subsystem details with editable fields.*
 
 
