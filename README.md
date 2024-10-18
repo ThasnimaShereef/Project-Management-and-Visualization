@@ -32,7 +32,7 @@ This project is a comprehensive system for managing projects, vendors, and subsy
 
 Here are some screenshots of the project:
 
-![Project Table](images/project_table.png)
+![Project Table](Images/project.png)
 *Example of the project table view.*
 
 ![Map View](images/map_view.png)
