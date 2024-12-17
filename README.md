@@ -28,20 +28,6 @@ This project is a comprehensive system for managing projects, vendors, and subsy
 - RDLC-generated PDF reports with filters for project type, name, subsystem type, and date range.
 - Detailed and professional output for system data, including project and subsystem details.
 
-## Screenshots
-
-Here are some screenshots of the project:
-
-![Project Table](Images/project.png)
-*Example of the project table view.*
-
-![Map View](Images/map.png)
-*Route visualization between project sites.*
-
-![Subsystem Management](Images/subsystem.png)
-*Subsystem details with editable fields.*
-
-
 ## Installation and Setup
 
 1. **Clone the Repository**:
